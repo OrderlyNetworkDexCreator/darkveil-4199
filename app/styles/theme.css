@@ -1,94 +1,121 @@
 :root {
-  --oui-font-family: 'Manrope', sans-serif;
+  /* Font Family - keeping Inter for that technical financial look */
+  --oui-font-family: 'Inter', sans-serif;
+  --oui-font-size-base: 14px;
 
-  /* colors */
-  --oui-color-primary: 176 132 233;
-  --oui-color-primary-light: 213 190 244;
-  --oui-color-primary-darken: 137 76 209;
-  --oui-color-primary-contrast: 255 255 255;
+  /* --- PRIMARY ACTION BUTTONS (UPDATED to WHITE) --- */
+  /* This controls the "Connect Wallet" and active "Buy" tabs */
+  --oui-color-primary: 255 255 255; 
+  --oui-color-primary-light: 240 240 240;
+  --oui-color-primary-darken: 200 200 200;
+  /* Important: Text on white buttons must be black */
+  --oui-color-primary-contrast: 0 0 0; 
 
-  --oui-color-link: 189 107 237;
-  --oui-color-link-light: 217 152 250;
+  /* Links */
+  --oui-color-link: 255 255 255;
+  --oui-color-link-light: 235 60 60; /* Hover Red */
 
-  --oui-color-secondary: 255 255 255;
-  --oui-color-tertiary: 218 218 218;
-  --oui-color-quaternary: 218 218 218;
-
-  --oui-color-danger: 245 97 139;
-  --oui-color-danger-light: 250 167 188;
-  --oui-color-danger-darken: 237 72 122;
+  /* --- MARKET COLORS (Charts & Trades) --- */
+  
+  /* SHORT / SELL (Red) */
+  --oui-color-danger: 235 60 60; 
+  --oui-color-danger-light: 255 90 90;
+  --oui-color-danger-darken: 180 20 20;
   --oui-color-danger-contrast: 255 255 255;
 
-  --oui-color-success: 41 233 169;
-  --oui-color-success-light: 101 240 194;
-  --oui-color-success-darken: 0 161 120;
-  --oui-color-success-contrast: 255 255 255;
+  /* LONG / BUY (Teal Green - match Solana/Ordering) */
+  --oui-color-success: 20 241 149; 
+  --oui-color-success-light: 100 255 200;
+  --oui-color-success-darken: 0 160 100;
+  --oui-color-success-contrast: 0 0 0;
 
+  /* Warning */
   --oui-color-warning: 255 209 70;
   --oui-color-warning-light: 255 229 133;
   --oui-color-warning-darken: 255 152 0;
-  --oui-color-warning-contrast: 255 255 255;
+  --oui-color-warning-contrast: 0 0 0;
 
-  --oui-color-fill: 36 32 47;
-  --oui-color-fill-active: 40 46 58;
+  /* --- BACKGROUNDS (Deep Dark Theme) --- */
+  
+  /* Main Background: Deep Blue-Black */
+  --oui-color-fill: 5 7 10; 
+  /* Hover/Active states for rows/lists */
+  --oui-color-fill-active: 20 24 30; 
 
-  --oui-color-base-1: 93 83 123;
-  --oui-color-base-2: 81 72 107;
-  --oui-color-base-3: 68 61 69;
-  --oui-color-base-4: 57 52 74;
-  --oui-color-base-5: 51 46 66;
-  --oui-color-base-6: 43 38 56;
-  --oui-color-base-7: 36 32 47;
-  --oui-color-base-8: 29 26 38;
-  --oui-color-base-9: 22 20 28;
-  --oui-color-base-10: 14 13 18;
+  /* Grey Scale for text and borders */
+  --oui-color-base-1: 160 165 175; /* Primary Text */
+  --oui-color-base-2: 130 135 145;
+  --oui-color-base-3: 100 105 115;
+  --oui-color-base-4: 70 75 85;
+  --oui-color-base-5: 50 55 65;
+  --oui-color-base-6: 40 44 50;
+  --oui-color-base-7: 30 34 40;  /* Input Fields */
+  --oui-color-base-8: 20 22 28;  /* Module Backgrounds */
+  --oui-color-base-9: 12 14 18;  /* Darker Module Backgrounds */
+  --oui-color-base-10: 5 7 10;   /* App Background */
 
   --oui-color-base-foreground: 255 255 255;
-  --oui-color-line: 255 255 255;
+  
+  /* Borders */
+  --oui-color-line: 35 38 45; 
 
-  --oui-color-trading-loss: 245 97 139;
+  /* Trading PnL */
+  --oui-color-trading-loss: 235 60 60;
   --oui-color-trading-loss-contrast: 255 255 255;
-  --oui-color-trading-profit: 41 233 169;
-  --oui-color-trading-profit-contrast: 255 255 255;
+  --oui-color-trading-profit: 20 241 149;
+  --oui-color-trading-profit-contrast: 0 0 0;
 
-  /* gradients */
-  --oui-gradient-primary-start: 40 0 97;
-  --oui-gradient-primary-end: 189 107 237;
+  /* --- GRADIENTS (Neutralized to match flat style) --- */
+  
+  /* Primary Gradient - subtle white/grey shift for buttons */
+  --oui-gradient-primary-start: 255 255 255;
+  --oui-gradient-primary-end: 220 220 220;
 
-  --oui-gradient-secondary-start: 81 42 121;
-  --oui-gradient-secondary-end: 176 132 233;
+  /* Secondary Gradient */
+  --oui-gradient-secondary-start: 40 44 50;
+  --oui-gradient-secondary-end: 30 34 40;
 
-  --oui-gradient-success-start: 1 83 68;
-  --oui-gradient-success-end: 41 223 169;
+  /* Success/Danger Gradients */
+  --oui-gradient-success-start: 20 241 149;
+  --oui-gradient-success-end: 0 180 110;
 
-  --oui-gradient-danger-start: 153 24 76;
-  --oui-gradient-danger-end: 245 97 139;
+  --oui-gradient-danger-start: 235 60 60;
+  --oui-gradient-danger-end: 180 30 30;
 
-  --oui-gradient-brand-start: 231 219 249;
-  --oui-gradient-brand-end: 159 107 225;
-  --oui-gradient-brand-stop-start: 6.62%;
-  --oui-gradient-brand-stop-end: 86.5%;
-  --oui-gradient-brand-angle: 17.44deg;
+  /* Brand Gradient - REMOVED the red glow, made it neutral */
+  /* This fixes the red glow on the "Connect Wallet" button */
+  --oui-gradient-brand-start: 255 255 255;
+  --oui-gradient-brand-end: 200 200 200;
+  --oui-gradient-brand-stop-start: 0%;
+  --oui-gradient-brand-stop-end: 100%;
+  --oui-gradient-brand-angle: 180deg;
 
   --oui-gradient-warning-start: 152 58 8;
   --oui-gradient-warning-end: 255 209 70;
 
-  --oui-gradient-neutral-start: 27 29 24;
-  --oui-gradient-neutral-end: 38 41 46;
+  --oui-gradient-neutral-start: 20 22 28;
+  --oui-gradient-neutral-end: 12 14 18;
 
-  /* rounded */
-  --oui-rounded-sm: 2px;
-  --oui-rounded: 4px;
-  --oui-rounded-md: 6px;
-  --oui-rounded-lg: 8px;
+  /* --- BORDER RADIUS --- */
+  --oui-rounded-sm: 4px;
+  --oui-rounded: 6px;
+  --oui-rounded-md: 8px;
+  --oui-rounded-lg: 10px;
   --oui-rounded-xl: 12px;
   --oui-rounded-2xl: 16px;
   --oui-rounded-full: 9999px;
 
-  /* spacing */
+  /* Spacing (Standard) */
   --oui-spacing-xs: 20rem;
   --oui-spacing-sm: 22.5rem;
   --oui-spacing-md: 26.25rem;
   --oui-spacing-lg: 30rem;
   --oui-spacing-xl: 33.75rem;
+}
+
+/* Ensure the body takes the deepest dark color */
+html, body {
+  background-color: rgb(var(--oui-color-base-10));
+  color: rgb(var(--oui-color-base-foreground));
+  font-family: var(--oui-font-family) !important;
 }
